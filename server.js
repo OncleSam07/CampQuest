@@ -165,6 +165,6 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err })
 })
 
-app.listen(PORT, () => {
-    console.log('LISTENING TO SERVER PORT 3000');
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`LISTENING TO SERVER PORT ${PORT}`);
 })
