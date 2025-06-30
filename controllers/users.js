@@ -13,7 +13,7 @@ module.exports.createUser = async (req, res) => {
         req.login(newUser, err => {
             if (err) return next(err);
 
-            req.flash('success', `Welcome to YelpCamp ${user.username}  `);
+            req.flash('success', `Welcome to CampQuest ${user.username}  `);
             res.redirect('/campgrounds');
 
         })
