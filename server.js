@@ -21,7 +21,7 @@ const LocalStrategy = require('passport-local');
 const mongoose = require('mongoose');
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/myCamp';
 const secret = process.env.SECRET || 'mySecret';
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 mongoose.connect(dbUrl);
 
