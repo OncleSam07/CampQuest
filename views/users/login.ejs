@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h3 class="text-center fw-bold">Log in to continue your adventure<br> in the wild with YelpCamp</h3>
+            <form action="/login" method="post" class="validated-form" novalidate>
+                <div class="mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input class="form-control" type="text" name="username" id="username" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Username required!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-control" type="password" name="password" id="password" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Password required!
+                    </div>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-success mb-3">Log in</button>
+                </div>
+
+                <p class="text-center">Don't have an account ? <b><a href="/register" class="text-success" style="text-decoration: none;">Sign up</a></b></p>
+
+            </form>
+        </div>
+    </div>
