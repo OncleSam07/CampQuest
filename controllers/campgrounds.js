@@ -1,4 +1,5 @@
 const passport = require('passport');
+const moment = require('moment');
 const Campground = require('../models/campground');
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding')
 const mapBoxToken = process.env.MAPBOX_TOKEN;
@@ -41,7 +42,9 @@ module.exports.showCamp = async (req, res) => {
         req.flash('error', 'Campground not found!  ');
         return res.redirect('/campgrounds');
     }
-    res.render('campgrounds/show', { campground })
+    //Update for time precision
+    const timeAgo = moment(campground.createdAt).fromNow();
+    res.render('campgrounds/show', { campground, timeAgo })
 };
 
 module.exports.editCamp = async (req, res) => {
