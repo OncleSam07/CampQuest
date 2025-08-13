@@ -146,6 +146,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.set('query parser', 'extended');
 
+app.locals.capitalizeFirst = function (str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+};
 
 app.use('/campgrounds', campgrounds);
 app.use('/campgrounds', reviews);
